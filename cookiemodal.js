@@ -48,6 +48,10 @@ function setDSGVOCookie() {
 
 }
 
+function checkBoxes(id){
+	document.getElementById(id).checked = true;
+}
+
 function setAllCookies() {
   
     setTimeout(checkBoxes("statistik"), 500);
