@@ -47,3 +47,20 @@ function setDSGVOCookie() {
     }
 
 }
+
+function setAllCookies() {
+  
+    setTimeout(checkBoxes("statistik"), 500);
+    setTimeout(checkBoxes("komfort"), 500);
+      setTimeout(checkBoxes("personalisierung"), 500);
+
+      setTimeout(function() {
+      
+    var cookieName = "DSGVOCookie"; 
+    var cookieValue = ",1,2,3,4,";
+    setPersistentCookie(cookieName, cookieValue, 730);
+      closeModal();
+    
+    }, 1500);
+
+}

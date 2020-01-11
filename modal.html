@@ -1,89 +1,109 @@
 <body>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-<script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@latest/cookiemodal.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@0.0.1/cookiemodal.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
-  
-        <!-- Modal content -->
-        <div class="modal-content">
-            <h1 class="title">Cookie Einstellungen</h1>
-            <p class="consent-info-text is-clipped">Wir verwenden Cookies, um Ihnen ein optimales Webseiten-Erlebnis zu bieten. Dazu zählen Cookies, die für den Betrieb der Seite und für die Steuerung unserer kommerziellen Unternehmensziele notwendig sind, sowie solche, die lediglich zu anonymen Statistikzwecken, für Komforteinstellungen oder zur Anzeige personalisierter Inhalte genutzt werden. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten. Bitte beachten Sie, dass auf Basis Ihrer Einstellungen womöglich nicht mehr alle Funktionalitäten der Seite zur Verfügung stehen. Weitere Informationen finden Sie in unseren Datenschutzhinweisen.</p>
+<div id="myModal" class="modal" style="display: flex">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Cookie Einstellungen</p>
+        </header>
+        <section class="modal-card-body">
+            <p class="consent-info-text is-clipped">Wir verwenden Cookies, um Ihnen ein optimales Webseiten-Erlebnis zu bieten. Dazu zählen Cookies, die für den Betrieb der Seite und für die Steuerung unserer kommerziellen Unternehmensziele notwendig sind, sowie solche, die lediglich zu anonymen Statistikzwecken, für Komforteinstellungen oder zur Anzeige personalisierter Inhalte genutzt werden. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten. Bitte beachten Sie, dass auf Basis Ihrer Einstellungen womöglich nicht mehr alle Funktionalitäten der Seite zur Verfügung stehen. Weitere Informationen finden Sie in unseren <a href="#">Datenschutzhinweisen.</a></p>
             <br>
-            <div class="field is-grouped is-grouped-multiline">
-                <div class="b-checkbox is-warning">
-                    <input class="is-checkradio" id="notwendig" type="checkbox" checked="checked" disabled>
-                    <label for="checkbox">
-                        Notwendig
-                    </label>
+            <div class="columns">
+            <div class="column">
+                <div class="cookie-option field">
+                    <input class="is-checkradio is-info" id="notwendig" type="checkbox" checked disabled>
+                    <label for="notwendig">Notwendig</label>
                 </div>
-                <p class="control">
-                    <div class="b-checkbox is-warning">
-                        <input id="statistik" class="styled" type="checkbox">
-                        <label for="checkbox">
-                            Statistik
-                        </label>
-                    </div>
-                </p>
-                <p class="control">
-                    <div class="b-checkbox is-warning">
-                        <input id="komfort" class="styled" type="checkbox">
-                        <label for="checkbox">
-                            Komfort
-                        </label>
-                    </div>
-                </p>
-                <p class="control">
-                    <div class="b-checkbox is-warning">
-                        <input id="personalisierung" class="styled" type="checkbox">
-                        <label for="checkbox">
-                            Personalisierung
-                        </label>
-                    </div>
-                </p>
-              </div>
-        <br>
-        <div class="field is-grouped is-pulled-right">
-            <p class="control">
-                <button onclick="setDSGVOCookie()" class="button">
-    Auswahl bestätigen
-    </button>
-            </p>
-            <p class="control">
-                <button class="button is-danger">
-    Alle Auswählen
-    </button>
-            </p>
+            </div>
+            <div class="column">
+                <div class="cookie-option field">
+                    <input class="is-checkradio is-info" id="statistik" type="checkbox">
+                    <label for="statistik">Statistik</label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="cookie-option field">
+                    <input class="is-checkradio is-info" id="komfort" type="checkbox">
+                    <label for="komfort">Komfort</label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="cookie-option field">
+                    <input class="is-checkradio is-info" id="personalisierung" type="checkbox">
+                    <label for="personalisierung">Personalisierung</label>
+                </div>
+            </div>
         </div>
-        </div>
+        </section>
+        <footer class="modal-card-foot">
+            <div class="columns">
+                <div class="column">
+                    <button onclick="setDSGVOCookie()" class="button">
+                        Auswahl bestätigen
+                    </button>
+                </div>
+                <div class="column">
+                    <button onclick="setAllCookies()" class="button is-warning">
+                        Alle Auswählen
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
     
 </body>
 
 <style>
+
+/* GLOBAL CSS */
+.modal-card-head {
+    border-radius: 0;
+}
 .consent-info-text {
     font-size: small;
 }
- /* The Modal (background) */
-.modal {
-  display: block;
-  z-index: 9999999; /* Sit on top */
-  overflow: hidden; /* Enable scroll if needed */
-  /* background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(33.3,33.3,33.3,0.8);  /* Black w/ opacity */
+
+.modal-card-body {
+    padding-bottom: 15px;
 }
 
-.modal-background {
- background-color: rgba(33.3,33.3,33.3,0.8);  /* Black w/ opacity */
+.modal-card-foot {
+    justify-content: right;
+    border-radius: 0;
 }
+
+.cookie-option:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* DESKTOP SPECIFIC CSS */
+@media (min-width: 1281px) {
   
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  max-width: 900px;
-}  
+    .modal-card {
+    max-width: 900px;
+    min-height: 400px;
+    }  
+
+}
+
+/* NOT DESKTOP SPECIFIC CSS */
+@media (max-width: 1280px) {
+  
+    .modal-card {
+    max-width: 90%;
+    min-height: 400px;
+    }
+
+}
+
+/* 
+
 </style>

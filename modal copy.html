@@ -1,0 +1,77 @@
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@0.0.1/cookiemodal.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h1 class="title">Cookie Einstellungen</h1>
+            <p class="consent-info-text is-clipped">Wir verwenden Cookies, um Ihnen ein optimales Webseiten-Erlebnis zu bieten. Dazu zählen Cookies, die für den Betrieb der Seite und für die Steuerung unserer kommerziellen Unternehmensziele notwendig sind, sowie solche, die lediglich zu anonymen Statistikzwecken, für Komforteinstellungen oder zur Anzeige personalisierter Inhalte genutzt werden. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten. Bitte beachten Sie, dass auf Basis Ihrer Einstellungen womöglich nicht mehr alle Funktionalitäten der Seite zur Verfügung stehen. Weitere Informationen finden Sie in unseren Datenschutzhinweisen.</p>
+            <br>
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="field">
+                    <input class="is-checkradio is-medium is-info" id="notwendig" type="checkbox">
+                    <label for="notwendig">Notwendig</label>
+                </div>
+                <div class="field">
+                    <input class="is-checkradio is-medium is-info" id="statistik" type="checkbox">
+                    <label for="statistik">Statistik</label>
+                </div>
+                <div class="field">
+                    <input class="is-checkradio is-medium is-info" id="komfort" type="checkbox">
+                    <label for="komfort">Komfort</label>
+                </div>
+                <div class="field">
+                    <input class="is-checkradio is-medium is-info" id="personalisierung" type="checkbox">
+                    <label for="personalisierung">Personalisierung</label>
+                </div>
+              </div>
+        <br>
+        <div class="field is-grouped is-pulled-right">
+            <p class="control">
+                <button onclick="setDSGVOCookie()" class="button">
+    Auswahl bestätigen
+    </button>
+            </p>
+            <p class="control">
+                <button class="button is-danger">
+    Alle Auswählen
+    </button>
+            </p>
+        </div>
+        </div>
+</div>
+    
+</body>
+
+<style>
+.consent-info-text {
+    font-size: small;
+}
+ /* The Modal (background) */
+.modal {
+  display: block;
+  z-index: 9999999; /* Sit on top */
+  overflow: hidden; /* Enable scroll if needed */
+  /* background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(33.3,33.3,33.3,0.8);  /* Black w/ opacity */
+}
+
+.modal-background {
+ background-color: rgba(33.3,33.3,33.3,0.8);  /* Black w/ opacity */
+}
+  
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 900px;
+}  
+</style>
