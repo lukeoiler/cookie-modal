@@ -14,7 +14,8 @@ function setPersistentCookie(name, value, expires) {
       
 function closeModal() {
     var modal = document.getElementById("myModal");
-    modal.classList.remove('is-active');
+    //modal.classList.remove('is-active');
+    modal.style.display = "none";
 }
     
 function setDSGVOCookie() {

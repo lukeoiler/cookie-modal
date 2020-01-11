@@ -1,5 +1,6 @@
 <body>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@latest/cookiemodal.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 <!-- The Modal -->
@@ -86,51 +87,3 @@
   max-width: 900px;
 }  
 </style>
-
-<script>
-function setPersistentCookie(name, value, expires) {
-var cookie = name + "=" + value + "; path=/; domain=." + location.hostname.replace(/^www\./i, "");
-if (typeof expires !== "undefined") {
-var now = new Date();
-now.setTime(now.getTime() + expires * 24 * 60 * 60 * 1000);
-cookie += "; expires=" + now.toUTCString();
-}
-
-document.cookie = cookie;
-}  
-  
-function closeModal() {
-	var modal = document.getElementById("myModal");
-	modal.classList.remove('is-active');
-}
-  
-function setDSGVOCookie() {
-  
-    var statistik = document.getElementById("statistik").checked;
-    var komfort = document.getElementById("komfort").checked;
-    var personalisierung = document.getElementById("personalisierung").checked;
-  
-  	if(statistik && !komfort && !personalisierung) {
-      
-      	  	var cookieName = "DSGVOCookie"; 
-			var cookieValue = ",1,2,";
-			setPersistentCookie(cookieName, cookieValue, 730);
-      		closeModal();
-      
-    } else if(statistik && komfort && !personalisierung) {
-      
-      	  	var cookieName = "DSGVOCookie"; 
-			var cookieValue = ",1,2,3,";
-			setPersistentCookie(cookieName, cookieValue, 730);
-      		closeModal();
-      
-    } else if(statistik && komfort && personalisierung) {
-      
-      	  	var cookieName = "DSGVOCookie"; 
-			var cookieValue = ",1,2,3,4,";
-			setPersistentCookie(cookieName, cookieValue, 730);
-      		closeModal(); 
-    }
-
-}
-</script>
