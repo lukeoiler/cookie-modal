@@ -14,37 +14,43 @@ function setPersistentCookie(name, value, expires) {
       
 function closeModal() {
     var modal = document.getElementById("myModal");
-    //modal.classList.remove('is-active');
-    modal.style.display = "none";
+    modal.classList.remove('is-active');
+    //modal.style.display = "none";
 }
     
 function setDSGVOCookie() {
+
+    document.getElementById("confirmButton").classList.add("is-loading");
     
     var statistik = document.getElementById("statistik").checked;
     var komfort = document.getElementById("komfort").checked;
     var personalisierung = document.getElementById("personalisierung").checked;
     
+    setTimeout(function() {
+
         if(statistik && !komfort && !personalisierung) {
         
-                var cookieName = "DSGVOCookie"; 
+            var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,2,";
             setPersistentCookie(cookieName, cookieValue, 730);
                 closeModal();
         
-    } else if(statistik && komfort && !personalisierung) {
+        } else if(statistik && komfort && !personalisierung) {
         
                 var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,2,3,";
             setPersistentCookie(cookieName, cookieValue, 730);
                 closeModal();
         
-    } else if(statistik && komfort && personalisierung) {
+        } else if(statistik && komfort && personalisierung) {
         
                 var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,2,3,4,";
             setPersistentCookie(cookieName, cookieValue, 730);
                 closeModal(); 
-    }
+        }
+
+    }, 200);
 
 }
 
@@ -53,10 +59,12 @@ function checkBoxes(id){
 }
 
 function setAllCookies() {
+
+    document.getElementById("allCookieButton").classList.add("is-loading");
   
-    setTimeout(checkBoxes("statistik"), 500);
-    setTimeout(checkBoxes("komfort"), 500);
-      setTimeout(checkBoxes("personalisierung"), 500);
+    setTimeout(checkBoxes("statistik"), 200);
+    setTimeout(checkBoxes("komfort"), 400);
+      setTimeout(checkBoxes("personalisierung"), 600);
 
       setTimeout(function() {
       
@@ -65,6 +73,6 @@ function setAllCookies() {
     setPersistentCookie(cookieName, cookieValue, 730);
       closeModal();
     
-    }, 1500);
+    }, 800);
 
 }

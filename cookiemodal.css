@@ -1,0 +1,109 @@
+/* GLOBAL CSS */
+.modal-card-head {
+    border-radius: 0;
+}
+.consent-info-text {
+    font-size: small;
+}
+
+.modal-card-body {
+    padding-bottom: 15px;
+}
+
+.modal-card-foot {
+    justify-content: right;
+    border-radius: 0;
+}
+
+.cookie-option:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    .modal-card {
+    max-width: 900px;
+
+    }  
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+    .modal-card {
+    max-width: 900px;
+    }  
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    .modal-card {
+    max-width: 90%;
+    }
+    .cookie-bar {
+      display: flex;
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .cookie-bar {
+      display: flex;
+  }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .modal-card {
+    max-width: 90%;
+    min-height: 400px;
+    }
+
+    .cookie-bar {
+      display: flex;
+    }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .modal-card {
+    max-width: 90%;
+    min-height: 400px;
+    }
+  
+}
