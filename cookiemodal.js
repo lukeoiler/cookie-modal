@@ -8,7 +8,6 @@ function setPersistentCookie(name, value, expires) {
     cookie += "; expires=" + now.toUTCString();
 
     }
-    
     document.cookie = cookie;
 }  
       
