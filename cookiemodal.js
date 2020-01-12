@@ -21,7 +21,7 @@ function addRow(e) {
 
     setTimeout(function() {
         removeRow();
-    }, 2500);
+    }, 3750);
 
   }
   
@@ -110,6 +110,6 @@ function setAllCookies() {
     setPersistentCookie(cookieName, cookieValue, 730);
       closeModal();
     
-    }, 800);
+    }, 1000);
 
 }
