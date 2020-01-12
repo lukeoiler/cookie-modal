@@ -1,10 +1,7 @@
 <body>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@1.1.0/cookiemodalindex.css">
     <!-- Cookie Modal Style und JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@1.1.1/cookiemodalindex.css">
     <script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@1.0.4/cookiemodal.js"></script>
-    
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
 
 <!-- The Modal -->
 <div id="cookieModalParent">
@@ -32,16 +29,18 @@
             </div>
             <div class="column">
                 <div class="cookie-option field">
-                    <input class="is-checkradio is-info" id="komfort" type="checkbox">
+                    <input class="is-checkradio is-info" id="komfort" type="checkbox" onclick="checkboxCheck(this)">
                     <label for="komfort">Komfort</label>
                 </div>
             </div>
             <div class="column">
                 <div class="cookie-option field">
-                    <input class="is-checkradio is-info" id="personalisierung" type="checkbox">
+                    <input class="is-checkradio is-info" id="personalisierung" type="checkbox" onclick="checkboxCheck(this)">
                     <label for="personalisierung">Personalisierung</label>
                 </div>
             </div>
+        </div>
+        <div id="checkBoxInfo">
         </div>
         </section>
         <footer class="modal-card-foot">
