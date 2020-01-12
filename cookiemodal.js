@@ -13,8 +13,9 @@ function setPersistentCookie(name, value, expires) {
 }  
       
 function closeModal() {
-    var modal = document.getElementById("myModal");
+    var modal = document.getElementById("cookieModal");
     modal.classList.remove('is-active');
+    modal.classList.remove('is-clipped');
     //modal.style.display = "none";
 }
     
