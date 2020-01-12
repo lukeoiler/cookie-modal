@@ -3,13 +3,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
     <!-- Cookie Modal Style und JS -->
     <script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@0.0.6/cookiemodal.js"></script>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@0.0.6/cookiemodal.css">
     
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
 
 <!-- The Modal -->
-<div id="myModal" class="modal" is-active>
+<div id="myModal" class="modal is-active">
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head">
@@ -52,8 +52,8 @@
                         Auswahl bestätigen
                     </button>
                 </div>
-                <div id="allCookieButton" class="column">
-                    <button onclick="setAllCookies()" class="button is-warning is-responsive is-fullwidth">
+                <div class="column">
+                    <button id="allCookieButton" onclick="setAllCookies()" class="button is-warning is-responsive is-fullwidth">
                         Alle Auswählen
                     </button>
                 </div>

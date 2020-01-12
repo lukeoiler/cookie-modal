@@ -29,8 +29,10 @@
   
     .modal-card {
     max-width: 900px;
-
     }  
+    .column {
+        flex-basis: auto;
+    }
   
 }
 
@@ -44,6 +46,9 @@
     .modal-card {
     max-width: 900px;
     }  
+    .column {
+        flex-basis: auto;
+    }
   
 }
 
@@ -59,7 +64,10 @@
     }
     .cookie-bar {
       display: flex;
-  }
+    }
+    .column {
+        flex-basis: auto;
+    }
   
 }
 
@@ -73,6 +81,9 @@
   .cookie-bar {
       display: flex;
   }
+  .column {
+    flex-basis: auto;
+    }
   
 }
 
@@ -85,11 +96,14 @@
   
     .modal-card {
     max-width: 90%;
-    min-height: 400px;
     }
 
     .cookie-bar {
       display: flex;
+    }
+
+    .column {
+        flex-basis: auto;
     }
   
 }
