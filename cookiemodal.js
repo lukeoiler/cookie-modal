@@ -5,6 +5,7 @@ function checkboxCheck(e) {
     } else if (e.id == "personalisierung" && e.checked) {
         document.getElementById("statistik").checked = true;
         document.getElementById("komfort").checked = true;
+        addRow(e.id);
     }
 }
 
@@ -20,7 +21,7 @@ function addRow(e) {
 
     setTimeout(function() {
         removeRow();
-    }, 5000);
+    }, 2500);
 
   }
   
