@@ -20,7 +20,7 @@ function addRow(e) {
 
     setTimeout(function() {
         removeRow();
-    }, 50000);
+    }, 5000);
 
   }
   
