@@ -72,7 +72,14 @@ function setDSGVOCookie() {
     
     setTimeout(function() {
 
-        if(statistik && !komfort && !personalisierung) {
+        if(!statistik && !komfort && !personalisierung) {
+        
+            var cookieName = "DSGVOCookie"; 
+            var cookieValue = ",1,";
+            setPersistentCookie(cookieName, cookieValue, 730);
+                closeModal();
+        
+        } else if(statistik && !komfort && !personalisierung) {
         
             var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,2,";
