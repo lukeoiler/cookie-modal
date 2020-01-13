@@ -1,8 +1,21 @@
 function checkboxCheck(e) {
-    if (e.id == "komfort" && e.checked) {
+
+    var statistik = document.getElementById("statistik").checked;
+    var komfort = document.getElementById("komfort").checked;
+    var personalisierung = document.getElementById("personalisierung").checked;
+
+    if (e.id == "komfort" && e.checked && !statistik) {
         document.getElementById("statistik").checked = true;
         addRow(e.id);
-    } else if (e.id == "personalisierung" && e.checked) {
+    } else if (e.id == "personalisierung" && e.checked && !komfort && !statistik) {
+        document.getElementById("statistik").checked = true;
+        document.getElementById("komfort").checked = true;
+        addRow(e.id);
+    } else if (e.id == "personalisierung" && e.checked && komfort && !statistik) {
+        document.getElementById("statistik").checked = true;
+        document.getElementById("komfort").checked = true;
+        addRow(e.id);
+    } else if (e.id == "personalisierung" && e.checked && !komfort && statistik) {
         document.getElementById("statistik").checked = true;
         document.getElementById("komfort").checked = true;
         addRow(e.id);
