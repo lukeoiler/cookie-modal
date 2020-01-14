@@ -134,7 +134,7 @@ function setAllCookies() {
 
 }
 
-function injectCSS() {
+function injectCSS(color) {
 var style = document.createElement('style');
   style.innerHTML = `
 /*! CSS Used from: https://www.turn-on.de/css/main.min.css?663664 */
@@ -262,7 +262,7 @@ var style = document.createElement('style');
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.88;
-  color: black;
+  color: ` + color + `;
 }
 /*! CSS Used keyframes */
 @-webkit-keyframes spinAround{from{transform:rotate(0);}to{transform:rotate(359deg);}}
