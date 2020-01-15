@@ -134,7 +134,7 @@ function setAllCookies() {
 
 }
 
-function injectCSS(color) {
+function injectCSS(color, fontsize) {
 	var style = document.createElement('style');
 	  style.innerHTML = `
 	/*! CSS Used from: https://www.turn-on.de/css/main.min.css?663664 */
@@ -260,7 +260,7 @@ function injectCSS(color) {
 
 	#cookieModalParent {
 	  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	  font-size: 16px;
+	  font-size: ` + fontsize + `px;
 	  line-height: 1.88;
 	  color: ` + color + `;
 	}
