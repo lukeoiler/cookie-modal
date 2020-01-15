@@ -271,8 +271,6 @@ function injectCSS(color) {
 	@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0);}to{-webkit-transform:rotate(359deg);transform:rotate(359deg);}}
 	  `;
   	document.head.appendChild(style);
-	console.log('jaja');
-	return 'oke';
 }
 
 var div = document.createElement('div');
