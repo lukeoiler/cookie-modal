@@ -260,7 +260,7 @@ function injectCSS(color, fontsize) {
 
 	#cookieModalParent {
 	  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	  font-size: ` + fontsize + `px;
+	  font-size: ` + fontsize + `;
 	  line-height: 1.88;
 	  color: ` + color + `;
 	}
