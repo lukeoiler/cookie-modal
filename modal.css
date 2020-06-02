@@ -87,7 +87,7 @@
 #cookieModalParent .button.is-loading::after {
 	-webkit-animation: spinAround .5s infinite linear;
 	animation: spinAround .5s infinite linear;
-	border: 2px solid #333333;
+	border: 2px solid #fff;
 	border-radius: 290486px;
 	border-right-color: transparent;
 	border-top-color: transparent;
@@ -304,6 +304,10 @@ print {
 #cookieModalParent .modal-card-head {
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 0px;
 }
 
 #cookieModalParent .modal-card-title {
@@ -551,14 +555,14 @@ print {
 }
 
 #cookieModalParent .modal-card-foot {
-	justify-content: flex-start;
+	justify-content: flex-end;
 	border-radius: 0;
 }
 
 @media (min-width: 1281px) {
 	#cookieModalParent .modal-card {
 		max-width: 900px;
-		min-width: 700px;
+		min-width: 800px;
 	}
 	#cookieModalParent .column {
 		flex-basis: auto;

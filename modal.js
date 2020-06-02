@@ -5,39 +5,31 @@ function setDSGVOCookie() {
     document.getElementById("confirmButton").classList.add("is-loading");
     
     var statistik = document.getElementById("statistik").checked;
-    var komfort = document.getElementById("komfort").checked;
     var personalisierung = document.getElementById("personalisierung").checked;
     
     setTimeout(function() {
 
-        if(!statistik && !komfort && !personalisierung) {
+        if(!statistik && !personalisierung) {
         
             var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,";
             setPersistentCookie(cookieName, cookieValue, 730);
                 closeModal();
         
-        } else if(statistik && !komfort && !personalisierung) {
+        } else if(statistik && !personalisierung) {
         
             var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,2,";
             setPersistentCookie(cookieName, cookieValue, 730);
                 closeModal();
         
-        } else if(statistik && komfort && !personalisierung) {
+        } else if(statistik && personalisierung) {
         
                 var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,2,3,";
             setPersistentCookie(cookieName, cookieValue, 730);
                 closeModal();
-        
-        } else if(statistik && komfort && personalisierung) {
-        
-                var cookieName = "DSGVOCookie"; 
-            var cookieValue = ",1,2,3,4,";
-            setPersistentCookie(cookieName, cookieValue, 730);
-                closeModal(); 
-        }
+        } 
 
     }, 200);
 
@@ -51,20 +43,17 @@ function setAllCookies() {
         checkBoxes("statistik");
     }, 200);
     setTimeout(function() {
-        checkBoxes("komfort");
-    }, 400);
-    setTimeout(function() {
         checkBoxes("personalisierung");
-    }, 600);
+    }, 400);
 
     setTimeout(function() {
       
     var cookieName = "DSGVOCookie"; 
-    var cookieValue = ",1,2,3,4,";
+    var cookieValue = ",1,2,3,";
     setPersistentCookie(cookieName, cookieValue, 730);
       closeModal();
     
-    }, 1000);
+    }, 800);
 
 }
 
@@ -73,23 +62,10 @@ function setAllCookies() {
 function checkboxCheck(e) {
 
     var statistik = document.getElementById("statistik").checked;
-    var komfort = document.getElementById("komfort").checked;
     var personalisierung = document.getElementById("personalisierung").checked;
 
-    if (e.id == "komfort" && e.checked && !statistik) {
+    if (e.id == "personalisierung" && e.checked && !statistik) {
         document.getElementById("statistik").checked = true;
-        addRow(e.id);
-    } else if (e.id == "personalisierung" && e.checked && !komfort && !statistik) {
-        document.getElementById("statistik").checked = true;
-        document.getElementById("komfort").checked = true;
-        addRow(e.id);
-    } else if (e.id == "personalisierung" && e.checked && komfort && !statistik) {
-        document.getElementById("statistik").checked = true;
-        document.getElementById("komfort").checked = true;
-        addRow(e.id);
-    } else if (e.id == "personalisierung" && e.checked && !komfort && statistik) {
-        document.getElementById("statistik").checked = true;
-        document.getElementById("komfort").checked = true;
         addRow(e.id);
     }
 }
