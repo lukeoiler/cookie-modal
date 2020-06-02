@@ -1,17 +1,16 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@latest/modal.css">
-<script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@latest/modal.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@master/modal.css">
+<!-- <link rel="stylesheet" href="C:\Users\Lukas\Documents\Code\cookie-modal\modal.css"> -->
+<script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@master/modal.js"></script>
 
 <div id="cookieModalParent">
     <div id="cookieModal" class="modal is-active is-clipped">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Cookie Einstellungen</p>
+                <p class="modal-card-title">COOKIE-EINSTELLUNGEN</p>
             </header>
             <section class="modal-card-body">
-                <p class="consent-info-text">Wir verwenden Cookies, um Ihnen ein optimales Webseiten-Erlebnis zu bieten. Dazu zählen Cookies, die für den Betrieb der Seite und für die Steuerung unserer kommerziellen Unternehmensziele notwendig sind, sowie solche, die lediglich zu anonymen
-                    Statistikzwecken, für Komforteinstellungen oder zur Anzeige personalisierter Inhalte genutzt werden. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten. Bitte beachten Sie, dass auf Basis Ihrer Einstellungen womöglich
-                    nicht mehr alle Funktionalitäten der Seite zur Verfügung stehen. Weitere Informationen finden Sie in unseren <a href="#">Datenschutzhinweisen.</a></p><br>
+                <p class="consent-info-text">Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren, Funktionen für soziale Medien anbieten zu können und die Zugriffe auf unsere Website zu analysieren. Außerdem geben wir Informationen zu Ihrer Verwendung unserer Website an unsere Partner für soziale Medien, Werbung und Analysen weiter. Unsere Partner führen diese Informationen möglicherweise mit weiteren Daten zusammen, die Sie ihnen bereitgestellt haben oder die sie im Rahmen Ihrer Nutzung der Dienste gesammelt haben.<a style="padding-left:3em" href="https://www.kind.com/de-de/datenschutz/">Datenschutzhinweise</a><a style="padding-left:2em" href="https://www.kind.com/de-de/impressum/">Impressum</a></p><br>
                 <div class="cookie-bar columns is-multiline">
                     <div class="column">
                         <div class="cookie-option field">
@@ -23,9 +22,6 @@
                         <div class="cookie-option field"><input class="is-checkradio is-info" id="statistik" type="checkbox"><label for="statistik">Statistik</label></div>
                     </div>
                     <div class="column">
-                        <div class="cookie-option field"><input class="is-checkradio is-info" id="komfort" type="checkbox" onclick="checkboxCheck(this)"><label for="komfort">Komfort</label></div>
-                    </div>
-                    <div class="column">
                         <div class="cookie-option field"><input class="is-checkradio is-info" id="personalisierung" type="checkbox" onclick="checkboxCheck(this)"><label for="personalisierung">Personalisierung</label></div>
                     </div>
                 </div>
@@ -33,8 +29,8 @@
             </section>
             <footer class="modal-card-foot">
                 <div class="columns is-multiline is-mobile">
-                    <div class="column"><button id="confirmButton" onclick="setDSGVOCookie()" class="button is-responsive is-fullwidth">Auswahl bestätigen</button></div>
-                    <div class="column"><button id="allCookieButton" onclick="setAllCookies()" class="button is-warning is-responsive is-fullwidth">Alle Auswählen</button></div>
+                    <div class="column"><button id="confirmButton" onclick="setDSGVOCookie()" class="button is-responsive">Auswahl bestätigen</button></div>
+                    <div class="column"><button id="allCookieButton" onclick="setAllCookies()" class="button is-warning is-responsive">Alle Auswählen</button></div>
                 </div>
             </footer>
         </div>

@@ -208,15 +208,15 @@
 }
 
 #cookieModalParent .button.is-warning {
-	background-color: #ffdd57;
+	background-color: #003972;
 	border-color: transparent;
-	color: rgba(0, 0, 0, .7);
+	color: rgba(255, 255, 255, 1);
 }
 
 #cookieModalParent .button.is-warning:hover {
-	background-color: #ffdb4a;
+	background-color: #003299;
 	border-color: transparent;
-	color: rgba(0, 0, 0, .7);
+	color: rgba(255, 255, 255, 1);
 }
 
 #cookieModalParent .button.is-warning:focus {
@@ -225,9 +225,9 @@
 }
 
 #cookieModalParent .button.is-warning:active {
-	background-color: #ffd83d;
+	background-color: #003299;
 	border-color: transparent;
-	color: rgba(0, 0, 0, .7);
+	color: rgba(255, 255, 255, 1);
 }
 
 #cookieModalParent .button.is-fullwidth {
@@ -293,7 +293,7 @@ print {
 #cookieModalParent .modal-card-foot,
 #cookieModalParent .modal-card-head {
 	align-items: center;
-	background-color: #f5f5f5;
+	background-color: #ffffff;
 	display: flex;
 	flex-shrink: 0;
 	justify-content: flex-start;
@@ -302,17 +302,17 @@ print {
 }
 
 #cookieModalParent .modal-card-head {
-	border-bottom: 1px solid #dbdbdb;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 }
 
 #cookieModalParent .modal-card-title {
-	color: #363636;
+	color: #003972;
 	flex-grow: 1;
 	flex-shrink: 0;
-	font-size: 1.5em;
+	font-size: 2em;
 	line-height: 1;
+	font-weight: bold;
 }
 
 #cookieModalParent .modal-card-foot {
@@ -543,7 +543,7 @@ print {
 }
 
 #cookieModalParent .consent-info-text {
-	font-size: small;
+	font-size: 0.8125em;
 }
 
 #cookieModalParent .modal-card-body {
