@@ -1,5 +1,7 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@master/modal.css">
-<script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@master/modal.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@v.1.5.2/modal.css">
+<script src="https://cdn.jsdelivr.net/gh/lukeoiler/cookie-modal@v.1.5.2/modal.js"></script>
 
 <div id="cookieModalParent">
     <div id="cookieModal" class="modal is-active is-clipped">
@@ -25,13 +27,50 @@
                     </div>
                 </div>
                 <div id="checkBoxInfo"></div>
+
+                <button class="collapsible">Details einblenden</button>
+                <div class="content">
+                    <div>
+                        <h3 style="margin-bottom: 0px">Notwendig</h3>
+                        <p class="consent-info-text">Diese Cookies sind für den Betrieb der Seite unbedingt notwendig und ermöglichen beispielsweise sicherheitsrelevante Funktionalitäten. Außerdem können wir mit dieser Art von Cookies ebenfalls erkennen, welche Cookie-Einstellungen gewählt wurden. Eine vollständige Liste aller Cookies finden Sie hier.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 0px">Statistiken</h3>
+                        <p class="consent-info-text">Um unser Angebot und unsere Webseite weiter zu verbessern, erfassen wir anonymisierte Daten für Statistiken und Analysen. Mithilfe dieser Cookies können wir beispielsweise die Besucherzahlen und den Effekt bestimmter Seiten unseres Web-Auftritts ermitteln und unsere Inhalte optimieren. Beispiele hierfür sind die Dienste Google Analytics, HotJar, Microsoft. Eine vollständige Liste aller Cookies finden Sie hier.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 0px">Personalisierungen</h3>
+                        <p class="consent-info-text">Diese Cookies werden genutzt, um Ihnen personalisierte Inhalte und Werbungen im Internet, passend zu Ihren Interessen anzuzeigen. Beispiele hierfür sind Dienste wie Criteo, IntelliAd, Google Display Netzwerk, Microsoft Bing Ads & Facebook. Eine vollständige Liste aller Cookies finden Sie hier.</p>
+                    </div>
+                
+                </div>
+
+
+
             </section>
             <footer class="modal-card-foot">
                 <div class="columns is-multiline is-mobile">
-                    <div class="column"><button id="confirmButton" onclick="setDSGVOCookie()" class="button is-responsive">Auswahl bestätigen</button></div>
-                    <div class="column"><button id="allCookieButton" onclick="setAllCookies()" class="button is-warning is-responsive">Alle bestätigen</button></div>
+                    <div class="column"><button id="confirmButton" onclick="setDSGVOCookie()" class="button is-responsive is-fullwidth">Auswahl bestätigen</button></div>
+                    <div class="column"><button id="allCookieButton" onclick="setAllCookies()" class="button is-warning is-responsive is-fullwidth">Alle bestätigen</button></div>
                 </div>
             </footer>
         </div>
     </div>
 </div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+</script>
