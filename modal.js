@@ -1,20 +1,14 @@
 // Modal Interactions
 function setDSGVOCookie() {
-
-    document.getElementById("confirmButton").classList.add("is-loading");
-    
+   
     var statistik = document.getElementById("statistik").checked;
     var personalisierung = document.getElementById("personalisierung").checked;
     
     setTimeout(function() {
 
         if(!statistik && !personalisierung) {
-        
-            var cookieName = "DSGVOCookie"; 
-            var cookieValue = ",1,";
-            setPersistentCookie(cookieName, cookieValue, 730);
-            CookieEvent(cookieValue);
-            closeModal();
+
+            showChild();
         
         } else if(statistik && !personalisierung) {
         
@@ -34,6 +28,16 @@ function setDSGVOCookie() {
         } 
 
     }, 200);
+
+}
+
+function setMinimalCookie(){
+
+    var cookieName = "DSGVOCookie"; 
+    var cookieValue = ",1,";
+    setPersistentCookie(cookieName, cookieValue, 730);
+    CookieEvent(cookieValue);
+    closeModal();
 
 }
 
@@ -114,12 +118,23 @@ function setPersistentCookie(name, value, expires) {
 }  
       
 function closeModal() {
+    closeChild()
     var modal = document.getElementById("cookieModal");
     modal.classList.remove('is-active');
     modal.classList.remove('is-clipped');
-    //modal.style.display = "none";
 }
-    
+
+function showChild() {
+    var child = document.getElementById("cookieModalChild").getElementsByClassName("modal")[0];
+    child.classList.add('is-active');
+    child.classList.add('is-clipped');
+}
+
+function closeChild() {
+    var child = document.getElementById("cookieModalChild").getElementsByClassName("modal")[0];
+    child.classList.remove('is-active');
+    child.classList.remove('is-clipped');
+}
 
 function checkBoxes(id){
 	document.getElementById(id).checked = true;
