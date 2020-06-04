@@ -1,5 +1,4 @@
 // Modal Interactions
-
 function setDSGVOCookie() {
 
     document.getElementById("confirmButton").classList.add("is-loading");
@@ -14,21 +13,24 @@ function setDSGVOCookie() {
             var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,";
             setPersistentCookie(cookieName, cookieValue, 730);
-                closeModal();
+            CookieEvent(cookieValue);
+            closeModal();
         
         } else if(statistik && !personalisierung) {
         
             var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,2,";
             setPersistentCookie(cookieName, cookieValue, 730);
-                closeModal();
+            CookieEvent(cookieValue);
+            closeModal();
         
         } else if(statistik && personalisierung) {
         
-                var cookieName = "DSGVOCookie"; 
+            var cookieName = "DSGVOCookie"; 
             var cookieValue = ",1,2,3,";
             setPersistentCookie(cookieName, cookieValue, 730);
-                closeModal();
+            CookieEvent(cookieValue);
+            closeModal();
         } 
 
     }, 200);
@@ -51,13 +53,21 @@ function setAllCookies() {
     var cookieName = "DSGVOCookie"; 
     var cookieValue = ",1,2,3,";
     setPersistentCookie(cookieName, cookieValue, 730);
-      closeModal();
+    CookieEvent(cookieValue);
+    closeModal();
     
     }, 800);
 
 }
 
 // Helper Functions
+
+function CookieEvent(value){
+    window.dataLayer.push({
+        'event': 'cookie_banner_send',
+        'cookieValue': value
+        });
+}
 
 function checkboxCheck(e) {
 
