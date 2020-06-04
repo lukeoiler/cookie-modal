@@ -37,6 +37,7 @@ function setMinimalCookie(){
     var cookieValue = ",1,";
     setPersistentCookie(cookieName, cookieValue, 730);
     CookieEvent(cookieValue);
+    closeChild();
     closeModal();
 
 }
@@ -118,8 +119,7 @@ function setPersistentCookie(name, value, expires) {
 }  
       
 function closeModal() {
-    closeChild();
-    var modal = document.getElementById("cookieModal");
+    var modal = document.getElementById("cookieModalParent").getElementsByClassName("modal")[0];
     modal.classList.remove('is-active');
     modal.classList.remove('is-clipped');
 }
