@@ -561,13 +561,7 @@ print {
 	float: right;
 	margin-left: 5px;
   }
-
-  #cookieModalParent .right {
-	position: absolute;
-	right: 20px;
-
-  }
-  
+ 
   #cookieModalParent .active:after {
 	content: "\2212";
   }
@@ -607,6 +601,11 @@ print {
 	#cookieModalParent .column {
 		flex-basis: auto;
 	}
+	#cookieModalParent .right {
+		position: absolute;
+		right: 20px;
+	
+	  }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -617,6 +616,11 @@ print {
 	#cookieModalParent .column {
 		flex-basis: auto;
 	}
+	#cookieModalParent .right {
+		position: absolute;
+		right: 20px;
+	
+	  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -629,6 +633,11 @@ print {
 	#cookieModalParent .column {
 		flex-basis: auto;
 	}
+	#cookieModalParent .right {
+		position: absolute;
+		right: 20px;
+	
+	  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -638,6 +647,11 @@ print {
 	#cookieModalParent .column {
 		flex-basis: auto;
 	}
+	#cookieModalParent .right {
+		position: absolute;
+		right: 20px;
+	
+	  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -650,6 +664,9 @@ print {
 	#cookieModalParent .column {
 		flex-basis: auto;
 	}
+	#cookieModalParent .right {
+		position: relative;
+	  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -657,6 +674,9 @@ print {
 		max-width: 90%;
 		min-height: 400px;
 	}
+	#cookieModalParent .right {
+		position: relative;
+	  }
 }
 
 
