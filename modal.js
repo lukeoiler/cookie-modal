@@ -59,6 +59,7 @@ function setAllCookies() {
     var cookieValue = ",1,2,3,";
     setPersistentCookie(cookieName, cookieValue, 730);
     CookieEvent(cookieValue);
+    closeChild();
     closeModal();
     
     }, 800);
