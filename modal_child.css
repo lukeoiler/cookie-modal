@@ -579,7 +579,7 @@ print {
 	background-color: #fff;
   }
 
-  #cookieModalParent .sbbtn {
+  #cookieModalChild .sbbtn {
 	flex-grow: 1;
   }
 
@@ -624,7 +624,7 @@ print {
 
 @media (min-width: 768px) and (max-width: 1024px) {
 	#cookieModalChild .modal-card {
-		max-width: 90%;
+		max-width: 70%;
 	}
 	#cookieModalChild .cookie-bar {
 		display: flex;
@@ -658,7 +658,6 @@ print {
 @media (min-width: 320px) and (max-width: 480px) {
 	#cookieModalChild .modal-card {
 		max-width: 90%;
-		min-height: 400px;
 	}
 }
 
