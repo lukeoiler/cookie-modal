@@ -118,7 +118,7 @@ function setPersistentCookie(name, value, expires) {
 }  
       
 function closeModal() {
-    closeChild()
+    closeChild();
     var modal = document.getElementById("cookieModal");
     modal.classList.remove('is-active');
     modal.classList.remove('is-clipped');
