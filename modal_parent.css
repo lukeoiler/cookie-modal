@@ -254,7 +254,7 @@
 	justify-content: center;
 	overflow: hidden;
 	position: fixed;
-	z-index: 9999;
+	z-index: 9998;
 }
 
 #cookieModalParent .modal.is-active {
