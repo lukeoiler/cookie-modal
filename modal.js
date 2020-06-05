@@ -80,9 +80,13 @@ function checkboxCheck(e) {
     var statistik = document.getElementById("statistik").checked;
     var personalisierung = document.getElementById("personalisierung").checked;
 
-    if (e.id == "personalisierung" && e.checked && !statistik) {
+    if (e.id == "personalisierung" && e.checked) {
         document.getElementById("statistik").checked = true;
+        document.getElementById("statistik").disabled = true;
         addRow(e.id);
+    }
+    else {
+        document.getElementById("statistik").disabled = false;
     }
 }
 
@@ -93,7 +97,7 @@ function addRow(e) {
 
     infoText.className = 'consent-info-text';
     infoText.id = 'checkBoxInfoText'
-    infoText.innerHTML = '*Um <b>' + nameCapitalized + "</b> auszuwählen, müssen auch die vorherigen Cookie-Gruppen aktiviert werden";
+    infoText.innerHTML = '*Um <b>' + nameCapitalized + "</b> auszuwählen, muss auch Statistik aktiviert werden";
     document.getElementById('checkBoxInfo').appendChild(infoText);
 
     setTimeout(function() {
