@@ -112,15 +112,9 @@ function removeRow() {
 
 function setPersistentCookie(name, value, expires) {
 
-    var cookie = name + "=" + value + "; path=/; domain=." + location.hostname.replace(/^www\./i, "");
-    if (typeof expires !== "undefined") {
+	var domainVal = location.hostname.replace(/^www\./i, "");
+	Cookies.set(name, value, { expires: 730, domain: domainVal });
 
-    var now = new Date();
-    now.setTime(now.getTime() + expires * 24 * 60 * 60 * 1000);
-    cookie += "; expires=" + now.toUTCString();
-
-    }
-    document.cookie = cookie;
 }  
       
 function closeModal() {
