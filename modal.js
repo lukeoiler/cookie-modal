@@ -113,7 +113,7 @@ function removeRow() {
 function setPersistentCookie(name, value, expires) {
 
 	var domainVal = location.hostname.replace(/^www\./i, "");
-	Cookies.set(name, value, { expires: 730, domain: domainVal });
+	Cookies.set(name, value, { expires: 730, domain: domainVal, path: '/', sameSite: 'strict' });
 
 }  
       
