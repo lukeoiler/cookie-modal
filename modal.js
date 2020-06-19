@@ -13,7 +13,7 @@ function setDSGVOCookie() {
         } else if(statistik && !personalisierung) {
         
             var cookieName = "DSGVOCookie"; 
-            var cookieValue = ",1,2,";
+            var cookieValue = "_1_2_";
             setPersistentCookie(cookieName, cookieValue, 730);
             CookieEvent(cookieValue);
             closeModal();
@@ -21,7 +21,7 @@ function setDSGVOCookie() {
         } else if(statistik && personalisierung) {
         
             var cookieName = "DSGVOCookie"; 
-            var cookieValue = ",1,2,3,";
+            var cookieValue = "_1_2_3_";
             setPersistentCookie(cookieName, cookieValue, 730);
             CookieEvent(cookieValue);
             closeModal();
@@ -34,7 +34,7 @@ function setDSGVOCookie() {
 function setMinimalCookie(){
 
     var cookieName = "DSGVOCookie"; 
-    var cookieValue = ",1,";
+    var cookieValue = "_1_";
     setPersistentCookie(cookieName, cookieValue, 730);
     CookieEvent(cookieValue);
     closeChild();
@@ -56,7 +56,7 @@ function setAllCookies() {
     setTimeout(function() {
       
     var cookieName = "DSGVOCookie"; 
-    var cookieValue = ",1,2,3,";
+    var cookieValue = "_1_2_3_";
     setPersistentCookie(cookieName, cookieValue, 730);
     CookieEvent(cookieValue);
     closeChild();
@@ -110,19 +110,19 @@ function removeRow() {
     document.getElementById('checkBoxInfoText').remove();
 }
 
-// function setPersistentCookie(name, value, expires) {
+function setPersistentCookie(name, value, expires) {
 
-//     var cookie = name + "=" + value + "; path=/; domain=." + location.hostname.replace(/^www\./i, "");
-//     if (typeof expires !== "undefined") {
+    var cookie = name + "=" + value + "; path=/; domain=." + location.hostname.replace(/^www\./i, "");
+    if (typeof expires !== "undefined") {
 
-//     var now = new Date();
-//     now.setTime(now.getTime() + expires * 24 * 60 * 60 * 1000);
-//     cookie += "; expires=" + now.toUTCString();
+    var now = new Date();
+    now.setTime(now.getTime() + expires * 24 * 60 * 60 * 1000);
+    cookie += "; expires=" + now.toUTCString();
 
-//     }
-//     console.log(cookie);
-//     document.cookie = cookie;
-// }  
+    }
+    console.log(cookie);
+    document.cookie = cookie;
+}  
       
 function closeModal() {
     var modal = document.getElementById("cookieModalParent").getElementsByClassName("modal")[0];
