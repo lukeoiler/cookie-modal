@@ -110,12 +110,19 @@ function removeRow() {
     document.getElementById('checkBoxInfoText').remove();
 }
 
-function setPersistentCookie(name, value, expires) {
+// function setPersistentCookie(name, value, expires) {
 
-	var domainVal = location.hostname.replace(/^www\./i, "");
-	Cookies.set(name, value, { expires: 730, domain: domainVal, path: '/', sameSite: 'strict' });
+//     var cookie = name + "=" + value + "; path=/; domain=." + location.hostname.replace(/^www\./i, "");
+//     if (typeof expires !== "undefined") {
 
-}  
+//     var now = new Date();
+//     now.setTime(now.getTime() + expires * 24 * 60 * 60 * 1000);
+//     cookie += "; expires=" + now.toUTCString();
+
+//     }
+//     console.log(cookie);
+//     document.cookie = cookie;
+// }  
       
 function closeModal() {
     var modal = document.getElementById("cookieModalParent").getElementsByClassName("modal")[0];
