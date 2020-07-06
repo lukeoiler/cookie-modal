@@ -127,6 +127,8 @@ function closeModal() {
     var modal = document.getElementById("cookieModalParent").getElementsByClassName("modal")[0];
     modal.classList.remove('is-active');
     modal.classList.remove('is-clipped');
+    var modalParent = document.getElementById("cookieModalParent");
+    modalParent.remove();
 }
 
 function showChild() {
@@ -139,6 +141,8 @@ function closeChild() {
     var child = document.getElementById("cookieModalChild").getElementsByClassName("modal")[0];
     child.classList.remove('is-active');
     child.classList.remove('is-clipped');
+    var modalChild = document.getElementById("cookieModalChild");
+    modalChild.remove();
 }
 
 function checkBoxes(id){
