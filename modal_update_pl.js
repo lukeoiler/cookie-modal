@@ -96,7 +96,7 @@ function addRow(e) {
 
     infoText.className = 'consent-info-text';
     infoText.id = 'checkBoxInfoText'
-    infoText.innerHTML = '*Um <b>' + nameCapitalized + "</b> auszuwählen, muss auch Statistik aktiviert werden";
+    infoText.innerHTML = '*Aby wybrać <b>pliki cookie do personalizacji</b>, należy również zaznaczyć pliki cookie do celów statystycznych';
     document.getElementById('checkBoxInfo').appendChild(infoText);
 
     setTimeout(function() {
