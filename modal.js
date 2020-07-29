@@ -67,6 +67,24 @@ function setAllCookies() {
 
 }
 
+function setAllCookiesPreview() {
+
+    document.getElementById("allCookieButtonPreview").classList.add("is-loading");
+  
+    setTimeout(function() {
+      
+    var cookieName = "DSGVOCookie"; 
+    var cookieValue = "_1_2_3_";
+    setPersistentCookie(cookieName, cookieValue, 730);
+    CookieEvent(cookieValue);
+    closeChild();
+    closeModal();
+    closePreview();
+    
+    }, 800);
+
+}
+
 // Helper Functions
 
 function CookieEvent(value){
