@@ -230,6 +230,23 @@
     color: rgba(255, 255, 255, 1);
 }
 
+#cookieModalPreview .button.is-empty {
+    border-color: transparent;
+}
+
+#cookieModalPreview .button.is-empty:hover {
+    border-color: transparent;
+}
+
+#cookieModalPreview .button.is-empty:focus {
+    color: rgba(0, 0, 0, .7);
+}
+
+#cookieModalPreview .button.is-empty:active {
+    border-color: transparent;
+}
+
+
 #cookieModalPreview .button.is-fullwidth {
     display: flex;
     width: 100%;
