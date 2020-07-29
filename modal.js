@@ -44,7 +44,7 @@ function setMinimalCookie(){
 
 function setAllCookies() {
 
-    document.getElementById("allCookieButton").classList.add("is-loading");
+    document.getElementById("allCookieButtonParent").classList.add("is-loading");
   
     setTimeout(function() {
         checkBoxes("statistik");
