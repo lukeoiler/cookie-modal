@@ -61,6 +61,7 @@ function setAllCookies() {
     CookieEvent(cookieValue);
     closeChild();
     closeModal();
+    closePreview();
     
     }, 800);
 
