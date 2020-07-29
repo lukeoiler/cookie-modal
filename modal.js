@@ -123,11 +123,23 @@ function setPersistentCookie(name, value, expires) {
     console.log(cookie);
     document.cookie = cookie;
 }  
+
+function closePreview() {
+    var modal = document.getElementById("cookieModalPreview").getElementsByClassName("modal")[0];
+    modal.classList.remove('is-active');
+    modal.classList.remove('is-clipped');
+}
       
 function closeModal() {
     var modal = document.getElementById("cookieModalParent").getElementsByClassName("modal")[0];
     modal.classList.remove('is-active');
     modal.classList.remove('is-clipped');
+}
+
+function showModal() {
+    var modal = document.getElementById("cookieModalParent").getElementsByClassName("modal")[0];
+    modal.classList.add('is-active');
+    modal.classList.add('is-clipped');
 }
 
 function showChild() {
@@ -143,5 +155,10 @@ function closeChild() {
 }
 
 function checkBoxes(id){
-	document.getElementById(id).checked = true;
+    document.getElementById(id).checked = true;
+}
+
+function openCookieSettings() {
+    closePreview();
+    showModal();
 }
